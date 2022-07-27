@@ -28,19 +28,33 @@ class Solution:
         
         # TODO: Write code below to return a nested list with the solution to the prompt
         com1 = []
-        first = m1[0]*m2[0] + m1[1]* m2[2]
-        second = m1[0]*m2[1] + m1[1]* m2[3]
-        com1= list.append(first)
-        com1 = list.append(second)
-        third =m1[2]*m2[0] + m1[3]* m2[2]
-        fourth = m1[2]*m2[1] + m1[3]* m2[2]
         com2 = []
-        com2 = list.append(third)
-        com2 = list.append(fourth)
-        anw = []
-        anw = list.append(com1)
-        anw = list.append(com2)
-        return anw
+        for i in range(2):
+            row = m1[i]
+            row1 = m2[0]
+            row2 = m2[1]
+            for j in range(2):
+                product = row[0]*row1[j] + row[1]* row2[j]
+                if i == 0:
+                    com1.append(product)
+                else:
+                    com2.append(product)
+        ans = [com1, com2]
+        return ans
+
+        # first = m1[0]*m2[0] + m1[1]* m2[2]
+        # second = m1[0]*m2[1] + m1[1]* m2[3]
+        # list.append(first)
+        # list.append(second)
+        # third =m1[2]*m2[0] + m1[3]* m2[2]
+        # fourth = m1[2]*m2[1] + m1[3]* m2[2]
+        # com2 = []
+        # list.append(third)
+        # list.append(fourth)
+        # anw = []
+        # list.append(com1)
+        # list.append(com2)
+        # return anw
 
 def main():
     array1 = input().split(" ")
