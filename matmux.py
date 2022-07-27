@@ -27,10 +27,17 @@ class Solution:
         # return: List[List[int]]
         
         # TODO: Write code below to return a nested list with the solution to the prompt
-        first = (m1[0]*m2[0] + m1[1]* m2[2], m1[0]*m2[1] + m1[1]* m2[3])
-        second =(m1[2]*m2[0] + m1[3]* m2[2], m1[2]*m2[1] + m1[3]* m2[2])
+        first = (m1[0]*m2[0] + m1[1]* m2[2]) 
+        second = m1[0]*m2[1] + m1[1]* m2[3]
+        com1= list.append(first)
+        com1 = list.append(second)
+        third =(m1[2]*m2[0] + m1[3]* m2[2])
+        fourth = m1[2]*m2[1] + m1[3]* m2[2]
+        com2 = list.append(third)
+        com2 = list.append(fourth)
         
-        anw = (first, second)
+        anw = list.append(com1)
+        anw = list.append(com2)
         return anw
 
 def main():
